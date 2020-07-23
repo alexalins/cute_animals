@@ -1,5 +1,6 @@
 import 'package:cute_animals/components/MyCard.dart';
 import 'package:cute_animals/components/MyDrawer.dart';
+import 'package:cute_animals/components/MyIcon.dart';
 import 'package:cute_animals/model/Dog.dart';
 import 'package:cute_animals/service/DogApi.dart';
 import 'package:flutter/material.dart';
@@ -41,7 +42,7 @@ class _DogPageState extends State<DogPage> {
           if (snapshot.hasData) {
             return MyCard(url: snapshot.data.message);
           } else {
-            return Image(image: new NetworkImage("https://3.bp.blogspot.com/-YZR_7TuOKH4/Wdj4bIwXV4I/AAAAAAALGwA/igEBDeZO3b40DTM7u0nXLck0PlSaW94eQCLcBGAs/s1600/AW567112_00.gif"));
+            return MyIcon();
           }
         },
       )),
