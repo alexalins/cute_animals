@@ -27,7 +27,7 @@ class MyDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            title: Text('Fox'),
+            title: Text('Foxes'),
             onTap: () {
               Navigator.pushReplacementNamed(context, '/dog');
             },
