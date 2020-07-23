@@ -1,5 +1,4 @@
-import 'dart:convert';
-
+import 'package:cute_animals/components/MyCard.dart';
 import 'package:cute_animals/components/MyDrawer.dart';
 import 'package:cute_animals/model/Dog.dart';
 import 'package:cute_animals/service/DogApi.dart';
@@ -40,7 +39,7 @@ class _DogPageState extends State<DogPage> {
         future: futureDog,
         builder: (context, snapshot) {
           if (snapshot.hasData) {
-            return new Image(image: new NetworkImage(snapshot.data.message));
+            return MyCard(url: snapshot.data.message);
           } else {
             return Image(image: new NetworkImage("https://3.bp.blogspot.com/-YZR_7TuOKH4/Wdj4bIwXV4I/AAAAAAALGwA/igEBDeZO3b40DTM7u0nXLck0PlSaW94eQCLcBGAs/s1600/AW567112_00.gif"));
           }
@@ -51,6 +50,7 @@ class _DogPageState extends State<DogPage> {
           newDog();
         },
         child: Icon(Icons.cached),
+        tooltip: "New Dog",
         backgroundColor: Colors.blueAccent,
       ),
     );
