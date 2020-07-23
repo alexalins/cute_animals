@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:cute_animals/components/MyDrawer.dart';
 import 'package:cute_animals/model/Dog.dart';
 import 'package:cute_animals/service/DogApi.dart';
 import 'package:flutter/material.dart';
@@ -33,6 +34,7 @@ class _DogPageState extends State<DogPage> {
         title: Text('Cute Dog'),
         centerTitle: true,
       ),
+      drawer: MyDrawer(),
       body: Center(
           child: FutureBuilder<Dog>(
         future: futureDog,
@@ -48,7 +50,7 @@ class _DogPageState extends State<DogPage> {
         onPressed: () {
           newDog();
         },
-        child: Icon(Icons.add),
+        child: Icon(Icons.cached),
         backgroundColor: Colors.blueAccent,
       ),
     );
