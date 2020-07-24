@@ -12,6 +12,7 @@ class CatApi {
     final response = await http.get(url);
     if (response.statusCode == 200) {
       final jsonresponse = json.decode(response.body);
+      //pegando so o primeiro pq vem um array
       return Cat.fromJson(jsonresponse[0]);
     } else {
       throw Exception('Failed to load Cat');
