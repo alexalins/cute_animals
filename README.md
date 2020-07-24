@@ -5,6 +5,7 @@ Uma aplicação desenvolvida em Flutter usando várias apis com imagens de anima
 ## APIS
 * [Dog Api](https://dog.ceo/dog-api/)
 * [Cat Api](https://docs.thecatapi.com/)
+* [Fox Api](https://randomfox.ca/floof/)
 
 ## Prints
 
