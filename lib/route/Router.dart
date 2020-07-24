@@ -1,3 +1,4 @@
+import 'package:cute_animals/page/CatPage.dart';
 import 'package:cute_animals/page/DogPage.dart';
 import 'package:cute_animals/page/SplashPage.dart';
 import 'package:flutter/material.dart';
@@ -9,6 +10,8 @@ class Router {
         return MaterialPageRoute(builder: (_) => SplashPage());
       case '/dog':
         return MaterialPageRoute(builder: (_) => DogPage());
+      case '/cat':
+        return MaterialPageRoute(builder: (_) => CatPage());
       default:
         errorRoute();
     }
