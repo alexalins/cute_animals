@@ -1,7 +1,5 @@
 import 'package:cute_animals/components/MyCard.dart';
 import 'package:cute_animals/components/MyDrawer.dart';
-import 'package:cute_animals/components/MyIcon.dart';
-import 'package:cute_animals/service/GoatApi.dart';
 import 'package:flutter/material.dart';
 
 
