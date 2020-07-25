@@ -1,7 +1,6 @@
 import 'dart:convert';
 import 'package:cute_animals/model/Fox.dart';
 import 'package:http/http.dart' as http;
-import 'package:cute_animals/model/Cat.dart';
 
 const baseUrl = "https://randomfox.ca/floof/";
 
