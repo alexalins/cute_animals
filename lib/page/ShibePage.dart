@@ -41,6 +41,7 @@ class _ShibePageState extends State<ShibePage> {
           if (snapshot.hasData) {
             return MyCard(url: snapshot.data);
           } else {
+            print("nda");
             return MyIcon();
           }
         },

@@ -7,11 +7,24 @@ class MyCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      child: new Container(
-        padding: EdgeInsets.all(8.0),
-        color: Colors.blueGrey,
-        child: new Image(image: NetworkImage(url)),
-      )
-    );
+        child: new Container(
+      child: new Image(
+        image: NetworkImage(url),
+        loadingBuilder: (BuildContext context, Widget child,
+            ImageChunkEvent loadingProgress) {
+          if (loadingProgress == null) return child;
+          return Center(
+            child: CircularProgressIndicator(
+              value: loadingProgress.expectedTotalBytes != null
+                  ? loadingProgress.cumulativeBytesLoaded /
+                      loadingProgress.expectedTotalBytes
+                  : null,
+            ),
+          );
+        },
+        height: 400,
+        width: 400,
+      ),
+    ));
   }
 }
